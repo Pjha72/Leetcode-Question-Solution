@@ -1,20 +1,19 @@
 class Solution {
 public:
     int balancedStringSplit(string s) {
-        int count = 0,ans=0;
+        int count = 0,count1=0,sum=0;
         for(int i=0;i<s.length();i++){
             if(s[i]=='L'){
                 count++;
             }
-            else if(s[i]=='R'){
-                count--;
+            else {
+                count1++;
             }
-            
-            if(count ==0){
-                ans++;
-            }
+           if(count == count1){
+               sum++;
+           }
             
         }
-        return ans;
+        return sum;
     }
 };
