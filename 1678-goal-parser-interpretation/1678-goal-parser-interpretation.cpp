@@ -1,17 +1,18 @@
 class Solution {
 public:
     string interpret(string command) {
-        for(int i=command.length()-2;i>=0;i--){
-            if(command[i]=='(' && command[i+1]== ')'){
-                command.replace(i,2,"o");
+        string temp = "";
+        for(int i=0;i<command.length();i++){
+            if(command[i]=='G'){
+                temp.append("G");
             }
-            if(command[i]=='(' && command[i+1]== 'a'){
-                command.replace(i,4,"al");
+            else if(command[i]=='(' && command[i+1]==')'){
+                temp.append("o");
             }
-            if(command[i]=='G' ){
-                command.replace(i,1,"G");
+             else if(command[i]=='(' && command[i+1]=='a' && command[i+2]=='l' && command[i+3]==')'){
+                temp.append("al");
             }
         }
-        return command;
+        return temp;
     }
 };
