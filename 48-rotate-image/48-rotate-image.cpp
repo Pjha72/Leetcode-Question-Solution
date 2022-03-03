@@ -22,7 +22,7 @@ public:
             
             swap(matrix[i][j] , matrix[i][matrix.size()-1-j]);
         }
-            j++;
+        j++;
     }
         
     }
