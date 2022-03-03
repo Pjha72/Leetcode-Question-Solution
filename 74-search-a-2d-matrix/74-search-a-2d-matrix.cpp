@@ -14,7 +14,7 @@ public:
             if(element==target){
                 return true;
             }
-            else if(target > element){
+           if(target > element){
                 start = mid + 1;
             }
             else{
