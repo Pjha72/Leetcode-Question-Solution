@@ -9,12 +9,6 @@ public:
         for(int i=0;i<m;i++){
             ans2+=word2[i];
         }
-        if(ans1 == ans2){
-            return true;
-        }
-        else{
-            return false;
-        }
-        
+        return (ans1==ans2); 
     }
 };
