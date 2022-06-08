@@ -2,7 +2,7 @@ class Solution {
 public:
     int removePalindromeSub(string s) {
         int i=0,j=s.length()-1;
-        if(!s.size())
+        if(s.size()==0)
             return 0;
         while(i<j){
             if(s[i]!=s[j]){
