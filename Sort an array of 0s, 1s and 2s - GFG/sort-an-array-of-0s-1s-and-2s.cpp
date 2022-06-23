@@ -10,7 +10,19 @@ class Solution
     public:
     void sort012(int a[], int n)
     {
-        sort(a,a+n);
+        // sort(a,a+n);
+        int s=0,m=0,e=n-1;
+        while(m<=e){
+            if(a[m]==0){
+                swap(a[m++],a[s++]);
+            }
+            else if(a[m]==1){
+                m++;
+            }
+            else {
+                swap(a[m],a[e--]);
+            }
+        }
     }
     
 };
