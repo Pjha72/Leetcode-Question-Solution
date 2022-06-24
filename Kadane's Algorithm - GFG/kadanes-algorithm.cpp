@@ -15,10 +15,10 @@ class Solution{
          long long int maxSum = INT_MIN;
         for( long long i=0;i<n;i++){
             currSum+=arr[i];
-            // if(currSum>maxSum){
-            //     maxSum=currSum;
-            // }
-            maxSum = max(currSum,maxSum);
+            if(currSum>maxSum){
+                maxSum=currSum;
+            }
+            // maxSum = max(currSum,maxSum);
             if(currSum<0){
                 currSum = 0;
             }
