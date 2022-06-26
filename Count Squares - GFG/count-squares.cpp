@@ -6,11 +6,18 @@ using namespace std;
 class Solution {
   public:
     int countSquares(int N) {
-        int i;
-        for( i=1;i*i<N;i++){
+        // int i;
+        // for( i=1;i*i<N;i++){
             
+        // }
+        // return i-1;
+        int count=0;
+        int i=1;
+        while(i*i<N){
+            i++;
+            count++;
         }
-        return i-1;
+        return count;
     }
 };
 
