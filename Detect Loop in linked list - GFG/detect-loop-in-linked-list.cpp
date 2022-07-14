@@ -51,14 +51,29 @@ class Solution
         if(head == NULL){
             return false;
         }
-        Node* temp = head;
-        map<Node*, bool> visited;
-        while(temp!=NULL){
-            if(visited[temp] == true){
+        // Node* temp = head;
+        // map<Node*, bool> visited;
+        // while(temp!=NULL){
+        //     if(visited[temp] == true){
+        //         return true;
+        //     }
+        //     visited[temp] = true;
+        //     temp = temp->next;
+        // }
+        // return false;
+        
+        Node* slow = head;
+        Node* fast = head;
+        
+        while(fast!=NULL && fast->next!=NULL){
+            fast = fast->next;
+            if(fast!=NULL){
+                fast = fast->next;
+            }
+            slow = slow->next;
+            if(slow==fast){
                 return true;
             }
-            visited[temp] = true;
-            temp = temp->next;
         }
         return false;
     }
