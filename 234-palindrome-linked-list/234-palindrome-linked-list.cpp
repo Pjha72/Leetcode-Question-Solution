@@ -31,6 +31,7 @@ public:
             arr.push_back(temp->val);
             temp = temp->next;
         }
+        // Apply check palindrome logic
         return checkPalindrome(arr);
     }
 };
