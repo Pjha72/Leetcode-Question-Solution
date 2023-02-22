@@ -6,14 +6,14 @@ using namespace std;
 class Solution {
   public:
     int setBits(int N) {
-        int ans = 0,i=0;
-        while(N!=0){
-            int bit = N%10;
-            ans = ans+bit*pow(10,i);
-            N=N/10;
-            i++;
-        }
-        return __builtin_popcount(ans);
+        // int ans = 0,i=0;
+        // while(N!=0){
+        //     int bit = N%10;
+        //     ans = ans+bit*pow(10,i);
+        //     N=N/10;
+        //     i++;
+        // }
+        return __builtin_popcount(N);
     }
 };
 
